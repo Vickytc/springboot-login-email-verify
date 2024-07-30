@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>激活账号</title>
+</head>
+<body>
+    <div>
+        Email地址验证<br>
+        这封信是为了验证你在网站注册的帐号<br>
+        账号激活说明：<br>
+        点击以下链接即可激活账号：<br>
+        <a th:href="@{${activationUrl}}"><span th:text="${activationUrl}"></span></a><br>
+        感谢您的访问，祝您生活愉快！<br>
+    </div>
+</body>
+</html>

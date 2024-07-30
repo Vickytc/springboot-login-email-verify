@@ -1,0 +1,39 @@
+server:
+  port=8080
+spring:
+  application:
+    name: register_login
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/login?serverTimezone=GMT%2B8
+  mail:
+    protocol: smtps #邮件协议
+    host: smtp.163.com #网易邮箱 smtp 服务器地址
+    port: 465
+    username: luxibai@163.com #发件人邮箱地址
+    password: KUWIOHGRQQROQKIA #授权码
+    default-encoding: utf-8 #编码字符集
+    properties:
+      mail:
+        debug: true #开启debug模式以后会完整打印邮件发送过程的日志
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    encoding: UTF-8
+    suffix: .html
+    servlet:
+      content-type: text/html
+    mode: HTML
+
+mybatis:
+  mapper-locations: classpath/mybatis/mapper/*.xml
+  type-aliases-package: com.example.entities
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com.example: debug
+
+
